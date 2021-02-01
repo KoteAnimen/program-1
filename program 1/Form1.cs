@@ -24,32 +24,39 @@ namespace program_1
 
         private void GetAnswer_Click(object sender, EventArgs e)
         {
-            mass = new int[(int)sizeMass.Value];
-            currentNumber = (int)minNumber.Value;
-            table.RowCount = 2;
+            //Задаем размер массива = N, и задаем 1-ое проверяемое число
+            mass = new int[(int)sizeMass.Value];//1
+            currentNumber = (int)minNumber.Value;//1
+            table.RowCount = 2;//1
 
-            for(int i = 0; i < mass.Length; i++)
+            //Создаем массив
+            for(int i = 0; i < mass.Length; i++)//2
             {
-                mass[i] = rnd.Next((int)minNumber.Value, (int)maxNumber.Value);
-                listNumbers.Items.Add(mass[i]);
+                mass[i] = rnd.Next((int)minNumber.Value, (int)maxNumber.Value);//2
+                listNumbers.Items.Add(mass[i]);//2
             }
-            for (int i = 0; i < mass.Length; i++)
+            //Перебираем массив чисел
+            for (int i = 0; i < mass.Length; i++)//3
             {
-                for(int j = 0; j < mass.Length; j++)
+                //Ищем совпадения с текущим проверяемым числом
+                for(int j = 0; j < mass.Length; j++)//4
                 {
-                    if(mass[j] == currentNumber)
+                    //Если проверяемый элемент массива = текущему проверяемому числу, то счетчик этого числа + 1
+                    if(mass[j] == currentNumbe5)//5
                     {
-                        countNumbers++;
+                        countNumbers++;//5
                     }
                 }
-                if(countNumbers != 0)
+                //Если счетчик текущего проверяемого числа не = 0, то выводим это число и значение счетчика найденых совпадений
+                if(countNumbers != 0)//6
                 {
-                    table.ColumnCount += 1;
-                    table[table.ColumnCount - 1, 0].Value = currentNumber;
-                    table[table.ColumnCount - 1, 1].Value = countNumbers;
+                    table.ColumnCount += 1;//6
+                    table[table.ColumnCount - 1, 0].Value = currentNumber;//6
+                    table[table.ColumnCount - 1, 1].Value = countNumbers;//6
                 }
-                countNumbers = 0;
-                currentNumber++;
+                //Обнуляем счетчик и переходим к следующему числу
+                countNumbers = 0;//7
+                currentNumber++;//7
             }
         }
     }
