@@ -44,19 +44,19 @@ namespace program_1
                     //Если проверяемый элемент массива = текущему проверяемому числу, то счетчик этого числа + 1
                     if(mass[j] == currentNumbe5)//5
                     {
-                        countNumbers++;//5
+                        countNumbers++;//6
                     }
                 }
                 //Если счетчик текущего проверяемого числа не = 0, то выводим это число и значение счетчика найденых совпадений
-                if(countNumbers != 0)//6
+                if(countNumbers != 0)//7
                 {
-                    table.ColumnCount += 1;//6
-                    table[table.ColumnCount - 1, 0].Value = currentNumber;//6
-                    table[table.ColumnCount - 1, 1].Value = countNumbers;//6
+                    table.ColumnCount += 1;//8
+                    table[table.ColumnCount - 1, 0].Value = currentNumber;//8
+                    table[table.ColumnCount - 1, 1].Value = countNumbers;//8
                 }
                 //Обнуляем счетчик и переходим к следующему числу
-                countNumbers = 0;//7
-                currentNumber++;//7
+                countNumbers = 0;//9
+                currentNumber++;//9
             }
         }
     }
