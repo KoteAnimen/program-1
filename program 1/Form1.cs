@@ -42,7 +42,7 @@ namespace program_1
                 for(int j = 0; j < mass.Length; j++)//4
                 {
                     //Если проверяемый элемент массива = текущему проверяемому числу, то счетчик этого числа + 1
-                    if(mass[j] == currentNumbe5)//5
+                    if(mass[j] == currentNumber)//5
                     {
                         countNumbers++;//6
                     }
